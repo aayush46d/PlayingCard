@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,17 +19,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="eNA-ya-zkz" customClass="PlayingCardView" customModule="PlayingCards" customModuleProvider="target">
-                                <rect key="frame" x="20" y="64" width="335" height="694"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="eNA-ya-zkz" customClass="PlayingCardView" customModule="PlayingCards" customModuleProvider="target">
+                                <rect key="frame" x="20" y="142.66666666666669" width="335" height="536.66666666666652"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="750" constant="400" id="BAy-T9-Xqz"/>
+                                    <constraint firstAttribute="width" secondItem="eNA-ya-zkz" secondAttribute="height" multiplier="5:8" id="hDN-qC-Z6B"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="eNA-ya-zkz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2Lj-bp-uSi"/>
-                            <constraint firstItem="eNA-ya-zkz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="FCv-o2-8LK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eNA-ya-zkz" secondAttribute="trailing" constant="20" id="lZl-XV-EB1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eNA-ya-zkz" secondAttribute="bottom" constant="20" id="sld-FV-r5k"/>
+                            <constraint firstItem="eNA-ya-zkz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2Lj-bp-uSi"/>
+                            <constraint firstItem="eNA-ya-zkz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="FCv-o2-8LK"/>
+                            <constraint firstItem="eNA-ya-zkz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QPL-m3-GbA"/>
+                            <constraint firstItem="eNA-ya-zkz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="axG-8I-vLt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eNA-ya-zkz" secondAttribute="trailing" constant="20" id="lZl-XV-EB1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eNA-ya-zkz" secondAttribute="bottom" constant="20" id="sld-FV-r5k"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
