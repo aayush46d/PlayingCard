@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -22,10 +21,14 @@
                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="eNA-ya-zkz" customClass="PlayingCardView" customModule="PlayingCards" customModuleProvider="target">
                                 <rect key="frame" x="20" y="142.66666666666669" width="335" height="536.66666666666652"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" priority="750" constant="400" id="BAy-T9-Xqz"/>
                                     <constraint firstAttribute="width" secondItem="eNA-ya-zkz" secondAttribute="height" multiplier="5:8" id="hDN-qC-Z6B"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="934-FS-BzE" appends="YES" id="C4f-ye-x72"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,8 +42,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="playingCardView" destination="eNA-ya-zkz" id="dI8-bY-TUk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="934-FS-BzE">
+                    <connections>
+                        <action selector="flipCardTap:" destination="BYZ-38-t0r" id="MHy-ZV-NTq"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
